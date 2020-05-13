@@ -1,0 +1,120 @@
+body {
+    background-image: url('./../images/bg-intro-desktop.png');
+    background-color: hsl(0, 100%, 74%);
+    margin: 50px;
+    font-family: "Poppins";
+    display: flex;
+    min-height: 800px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.purple-btn {
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    padding: 20px 100px 20px 100px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px hsla(249, 10%, 26%, 0.200);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.div1 {
+    max-width: 550px;
+}
+
+.div2 {
+    max-width: 560px;
+}
+
+h1 {
+    font-weight: 700px;
+    color: white;
+    font-size: 50px;
+}
+
+p {
+    font-weight: 600px;
+    color: white;
+}
+
+.box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input {
+    font-family: Poppins;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid hsla(249, 10%, 26%, 0.200);
+    font-weight: bold;
+}
+
+input:focus {
+    outline-color: hsl(248, 32%, 49%);
+}
+
+.input-error {
+    border: 2px solid red;
+    background-image: url('./../images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+}
+
+.text-error {
+    display: block !important;
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: red;
+    font-style: italic;
+    font-size: 10px;
+}
+
+.display-none {
+    display: none;
+}
+
+.green-btn {
+    text-align: center;
+    background-color: hsl(154, 59%, 51%, 0.9);
+    color: white;
+    padding: 20px 80px 15px 80px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px hsl(154, 59%, 51%);
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+}
+
+.green-btn:hover{
+    background-color: hsl(154, 59%, 51%, 0.7);
+}
+
+.text-bottom{
+    font-size: 10px;
+    color: grey;
+    text-align: center;
+}
+
+.text-bottom b{
+    color: red;
+}

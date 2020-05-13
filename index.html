@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="div1">
+      <h1>Learn to code by<br> watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time.
+        Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div class="div2">
+      <div class="purple-btn"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
+      <div class="box">
+        <input type="text" name="Username" id="Username" placeholder="Username" />
+        <p class="display-none" id="UsernameError">First Name cannot be empty</p>
+        <input type="text" name="LastName" id="LastName" placeholder="Last Name" />
+        <p class="display-none" id="LastNameError">Last Name cannot be empty</p>
+        <input type="email" name="Email" id="Email" placeholder="Email Adress" />
+        <p class="display-none" id="EmailError">Looks like this is not an email</p>
+        <input type="password" name="Password" id="Password" placeholder="Password" />
+        <p class="display-none" id="PasswordError">Password cannot be empty</p>
+        <button class="green-btn" onClick="validar()">Claim your free trial</button>
+        <p class="text-bottom">By clicking the button, you are agreeing to our <b>Terms and Services</b></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  function validar() {
+    var Username = document.getElementById("Username")
+    var UserNameError = document.getElementById("UsernameError")
+    if (Username.value.length < 1) {
+      Username.className = 'input-error'
+      UserNameError.className = 'text-error'
+    }
+    else {
+      Username.classList.remove('input-error')
+      UserNameError.className = 'display-none'      
+    }
+    var LastName = document.getElementById("LastName")
+    var LastNameError = document.getElementById("LastNameError")
+    if (LastName.value.length < 1) {
+      LastName.className = 'input-error'
+      LastNameError.className = 'text-error'
+    }
+    else {
+      LastName.classList.remove('input-error')
+      LastNameError.className = 'display-none'
+    }
+    var Email = document.getElementById("Email")
+    var EmailError = document.getElementById("EmailError")
+    if (Email.value.includes('@')){
+      var str = Email.value.split("@");
+      if(str[0].length < 1 || str[1].length < 1){
+        Email.className = 'input-error'
+        EmailError.className = 'text-error'
+      }
+      else {
+        Email.classList.remove('input-error')
+        EmailError.className = 'display-none'
+      }  
+    }
+    else{
+      Email.className = 'input-error'
+      EmailError.className = 'text-error'
+    }
+    var Password = document.getElementById("Password")
+    var PasswordError = document.getElementById("PasswordError")
+    if (Password.value.length < 1) {
+      Password.className = 'input-error'
+      PasswordError.className = 'text-error'
+    }
+    else {
+      Password.classList.remove('input-error')
+      PasswordError.className = 'display-none'
+    }
+  }
+</script>
